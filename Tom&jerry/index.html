@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(#f63c64, #3f87a6);
+            width: 100vw;
+            height: 100vh;
+        }
+        .card{
+            width: 22%;
+            height: 50vh;
+            position: absolute;
+            top: 20vh;
+            background-size: cover;
+        }
+        @keyframes ltr{
+            25%{
+                filter: blur(4px);
+            }
+            50%{
+                transform: translate(40vw);
+            }
+            100%{
+                transform: translate(0vw);
+                z-index: 1;
+                
+            }
+        }
+        @keyframes rtl {
+            25%{
+                
+            }
+            50%{
+                transform: translate(-40vw);
+                filter: blur(0px);
+            }
+            75%{
+                filter: blur(4px);
+            }
+            100%{
+                transform: translate(0vw);
+               
+            }
+        }
+        #b1{
+            background-image: url("https://pngimg.com/d/tom_and_jerry_PNG58.png");
+            left: 20vw;
+            
+            animation: ltr 5s infinite;
+        }
+        #b2{
+            background-image: url("https://i.pinimg.com/originals/03/a4/d5/03a4d55748dfefa852df76b085708c0a.png");
+            left: 60vw;
+            animation: rtl 5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="b1"></div>
+    <div class="card" id="b2"></div>
+</body>
+</html>
